@@ -15,7 +15,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Policeapp">
-        <activity android:name=".phoneAuth"></activity>
         <activity android:name=".complain" />
         <activity android:name=".Frontpage_Activity">
             <intent-filter>
