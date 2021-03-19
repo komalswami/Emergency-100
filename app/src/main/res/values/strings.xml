@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Police100</string>
+    <string name="aadhar_number">Aadhar Number</string>
+    <string name="email_gmail_com">Email@gmail.com</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="register">Register</string>
+    <string name="enter_otp_here">Enter otp here</string>
+    <string name="password">Password</string>
+    <string name="already_have_account_sign_in">Already have account! Sign in</string>
+    <string name="your_name">Your Name</string>
+    <string name="age">Age</string>
+    <string name="female1">Female</string>
+    <string name="male1">Male</string>
+    <string name="other1">Other</string>
+    <string name="example_gmail_com">example@gmail.com</string>
+    <string name="select_type">Select type</string>
+    <string name="panic1">PANIC</string>
+    <string name="note_urgent_emergency_accident">NOTE:urgent || Emergency ||Accident</string>
+    <string name="report_case">Report Case</string>
+    <string name="help_other_person">Help Other Person</string>
+    <string name="logout">Logout</string>
+    <string name="username">Username</string>
+    <string name="password1">Password</string>
+    <string name="log_in">Log in</string>
+    <string name="don_t_have_an_aacount">Don\'t have an aacount !</string>
+    <string name="name_of_that_person">Name of that Person</string>
+    <string name="there_age">There Age</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="other">Other</string>
+    <string name="there_address">There Address</string>
+    <string name="select_crime_type">Select Crime Type</string>
+    <string name="select_file">Select File</string>
+    <string name="panic">PANIC</string>
+    <string name="report">Report</string>
+    <string name="get_location">get_location</string>
+    <string name="show_location">show_location</string>
+    <string name="open_cam1">open_cam</string>
+    <string name="open_cam2">open_cam</string>
+    <string name="open_cam3">open_cam</string>
+
+    <string name="send_req">send_req</string>
+
+    <string name="message">Message</string>
+    <string name="complain">Complain</string>
+    <string name="address">Address</string>
+    <string name="get_add">get Add.</string>
+    <string name="add">add.</string>
+
+
+</resources>
