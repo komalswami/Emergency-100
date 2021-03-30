@@ -1,7 +1,5 @@
 package com.example.policeapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +7,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class sendotp_Activity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +27,15 @@ public class sendotp_Activity extends AppCompatActivity {
                     Toast.makeText(sendotp_Activity.this, "Enter Mobile", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                Intent intent = new Intent(getApplicationContext(), VerificationActivity.class);
-                intent.putExtra("mobile", inputMobile.getText().toString());
-                startActivity(intent);
+                else
+                {
+                    String mo=inputMobile.getText().toString();
+                    Toast.makeText(sendotp_Activity.this, "Mobile "+mo, Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(getApplicationContext(), VerificationActivity.class);
+                    intent.putExtra("mobile", inputMobile.getText().toString());
+                    startActivity(intent);
+                }
+
             }
         });
     }

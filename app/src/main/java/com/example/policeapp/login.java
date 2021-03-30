@@ -52,7 +52,7 @@ public class login extends AppCompatActivity {
         fgt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),VerificationActivity.class));
+                startActivity(new Intent(getApplicationContext(),forgotPassword_Activity.class));
             }
         });
         login.setOnClickListener(new View.OnClickListener() {

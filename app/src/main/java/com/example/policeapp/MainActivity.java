@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(auth.getCurrentUser()!= null)
         {
-            startActivity(new Intent(getApplicationContext(),complain.class));
+            startActivity(new Intent(getApplicationContext(),sendotp_Activity.class));
             finish();
         }
         reg.setOnClickListener(new View.OnClickListener(){
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                    if(task.isSuccessful())
                    {
                        Toast.makeText(MainActivity.this,"User Created!!",Toast.LENGTH_LONG).show();
-                       startActivity(new Intent(getApplicationContext(),cam.class));
+                       startActivity(new Intent(getApplicationContext(),sendotp_Activity.class));
                    }
                    else
                    {
