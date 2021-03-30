@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -24,6 +25,8 @@ public class login extends AppCompatActivity {
     ProgressBar prgbar;
     EditText e_aadhar1;
     String username, password;
+    TextView fgt;
+
 
 
     @Override
@@ -36,6 +39,8 @@ public class login extends AppCompatActivity {
         pass = (EditText) findViewById(R.id.pass);
         prgbar = (ProgressBar) findViewById(R.id.prgbar2);
 
+        fgt=(TextView)findViewById(R.id.textView2);
+
         fAuth = FirebaseAuth.getInstance();
 
         if(fAuth.getCurrentUser()!= null)
@@ -44,6 +49,12 @@ public class login extends AppCompatActivity {
             finish();
         }
 
+        fgt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),VerificationActivity.class));
+            }
+        });
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

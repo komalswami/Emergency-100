@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(),complain.class));
             finish();
         }
-
         reg.setOnClickListener(new View.OnClickListener(){
             @Override
                public void onClick(View v) {

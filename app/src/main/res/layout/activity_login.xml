@@ -58,6 +58,8 @@
         android:layout_height="wrap_content"
         android:background="@drawable/btn1_main"
         android:text="@string/log_in"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/pass"
         app:layout_constraintHorizontal_bias="0.0"
