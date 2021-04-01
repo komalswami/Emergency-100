@@ -72,7 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="gotomain"
-        android:text="@string/don_t_have_an_aacount"
+        android:text="Don't have account!"
         android:textColor="@color/purple_500"
         android:textColorHighlight="#2548B1"
         android:textSize="20sp"

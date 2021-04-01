@@ -19,8 +19,7 @@
            android:layout_height="130dp"
            android:layout_marginTop="80dp"
            android:contentDescription="@string/app_name"
-           android:src="@android:drawable/ic_menu_send"
-           tools:srcCompat="@android:drawable/ic_menu_send" />
+           android:src="@android:drawable/ic_menu_send" />
 
        <TextView
            android:layout_width="wrap_content"
