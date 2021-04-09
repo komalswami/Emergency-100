@@ -5,11 +5,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class sendotp_Activity extends AppCompatActivity {
+
+    Button btn_cmp;
+    EditText mobileno;
+    String phn_no,aadhar,email,pass;
+
 
 
     @Override
@@ -17,26 +21,27 @@ public class sendotp_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sendotp_);
 
-        final EditText inputMobile= findViewById(R.id.inputMobile);
-        Button buttonGetOTP = findViewById(R.id.buttonGetOTP);
+        aadhar=getIntent().getStringExtra("adhar");
+        email=getIntent().getStringExtra("email");
+        pass=getIntent().getStringExtra("pass");
 
-        buttonGetOTP.setOnClickListener(new View.OnClickListener() {
+        mobileno=(EditText)findViewById(R.id.inputMobile);
+        btn_cmp=(Button)findViewById(R.id.buttonGetOTP);
+        btn_cmp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (inputMobile.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(sendotp_Activity.this, "Enter Mobile", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                else
-                {
-                    String mo=inputMobile.getText().toString();
-                    Toast.makeText(sendotp_Activity.this, "Mobile "+mo, Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(getApplicationContext(), VerificationActivity.class);
-                    intent.putExtra("mobile", inputMobile.getText().toString());
-                    startActivity(intent);
-                }
+                phn_no= "+91" + mobileno.getText().toString();
+                Intent intent=new Intent(getApplicationContext(), VerificationActivity.class);
 
+                intent.putExtra("mobile_no",phn_no);
+                intent.putExtra("whattodo","upload_data");
+
+                intent.putExtra("adhar",aadhar);
+                intent.putExtra("email",email);
+                intent.putExtra("pass",pass);
+                startActivity(intent);
             }
         });
+
     }
 }

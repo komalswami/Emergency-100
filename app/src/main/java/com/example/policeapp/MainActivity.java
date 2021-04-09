@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth auth;
     ProgressBar prgbar;
     String adhar;
+    String username,password;
 
 
 
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
 
 
@@ -51,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
         reg.setOnClickListener(new View.OnClickListener(){
             @Override
                public void onClick(View v) {
-                String username=name.getText().toString().trim();
-                String password=e_pass.getText().toString().trim();
+                username=name.getText().toString().trim();
+                password=e_pass.getText().toString().trim();
                 adhar=aadhar.getText().toString();
 
 
@@ -65,8 +67,12 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                    if(task.isSuccessful())
                    {
-                       Toast.makeText(MainActivity.this,"User Created!!",Toast.LENGTH_LONG).show();
-                       startActivity(new Intent(getApplicationContext(),sendotp_Activity.class));
+                       Toast.makeText(MainActivity.this,"next!!",Toast.LENGTH_LONG).show();
+                       Intent intent=new Intent(getApplicationContext(),sendotp_Activity.class);
+                       intent.putExtra("adhar",adhar);
+                       intent.putExtra("email",username);
+                       intent.putExtra("pass",password);
+                       startActivity(intent);
                    }
                    else
                    {

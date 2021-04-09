@@ -64,7 +64,7 @@
                android:layout_width="wrap_content"
                android:layout_height="40dp"
                android:gravity="center"
-               android:text="+91"
+               android:text="+91-"
                android:textColor="@color/colorPrimaryDark"
                android:textSize="16sp"
                android:textStyle="bold"/>
@@ -74,7 +74,7 @@
                android:layout_width="wrap_content"
                android:layout_height="40dp"
                android:background="@null"
-               android:hint="-1234567890"
+               android:hint="1234567890"
                android:imeOptions="actionDone"
                android:importantForAutofill="no"
                android:inputType="number"
@@ -83,14 +83,6 @@
                android:textStyle="bold"/>
 
        </LinearLayout>
-
-       <view
-           android:layout_width="match_parent"
-           android:layout_height="2dp"
-           android:layout_marginStart="70dp"
-           android:layout_marginTop="8dp"
-           android:layout_marginEnd="70dp"
-           android:background="@color/colorDivider"/>
 
        <Button
            android:id="@+id/buttonGetOTP"
@@ -102,10 +94,6 @@
            android:textColor="@color/white"
            android:textSize="16sp"
            android:textStyle="bold"/>
-
-
-
-
 
 
    </LinearLayout>

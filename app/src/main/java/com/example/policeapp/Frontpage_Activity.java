@@ -29,7 +29,7 @@ public class Frontpage_Activity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),sendotp_Activity.class));
+                startActivity(new Intent(getApplicationContext(),complain.class));
             }
         });
 
