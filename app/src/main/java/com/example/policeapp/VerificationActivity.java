@@ -45,7 +45,6 @@ public class VerificationActivity extends AppCompatActivity {
         resend_otp=(TextView)findViewById(R.id.textResendOTP);
 
         _phoneNo=getIntent().getStringExtra("mobile_no");
-        _what=getIntent().getStringExtra("whattodo");
 
         aadhar1=getIntent().getStringExtra("adhar");
         email1=getIntent().getStringExtra("email");
@@ -121,14 +120,10 @@ public class VerificationActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                            Toast.makeText(VerificationActivity.this,"Phone Number Verified",Toast.LENGTH_LONG).show();
-                           if(_what.equals("upload_data")) {
+
                                uploadData();
                                startActivity(new Intent(getApplicationContext(),complain.class));
-                           }else{
-                               Intent intent=new Intent(getApplicationContext(),New_credential_Activity.class);
-                               intent.putExtra("phn_no",_phoneNo);
-                               startActivity(intent);
-                           }
+
                         } else {
 
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {

@@ -32,10 +32,7 @@ public class sendotp_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 phn_no= "+91" + mobileno.getText().toString();
                 Intent intent=new Intent(getApplicationContext(), VerificationActivity.class);
-
                 intent.putExtra("mobile_no",phn_no);
-                intent.putExtra("whattodo","upload_data");
-
                 intent.putExtra("adhar",aadhar);
                 intent.putExtra("email",email);
                 intent.putExtra("pass",pass);

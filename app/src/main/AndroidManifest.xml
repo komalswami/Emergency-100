@@ -15,8 +15,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Policeapp">
-        <activity android:name=".Success"></activity>
-        <activity android:name=".New_credential_Activity" />
         <activity android:name=".forgotPassword_Activity" />
         <activity
             android:name=".sendotp_Activity"
