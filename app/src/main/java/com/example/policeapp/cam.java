@@ -114,7 +114,10 @@ public class cam extends AppCompatActivity {
                         root.child(modelId).setValue(model);
                     }
                 });
-                Toast.makeText(cam.this,"upload complete",Toast.LENGTH_LONG).show();
+                //Toast.makeText(cam.this,"upload complete",Toast.LENGTH_LONG).show();
+                Intent intent=new Intent(getApplicationContext(),success.class);
+                intent.putExtra("success_msg","Request sent successfully!");
+                startActivity(intent);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

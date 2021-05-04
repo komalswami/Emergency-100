@@ -11,12 +11,11 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".HelpOther"
         android:background="@drawable/bbr"
         >
 
         <EditText
-            android:id="@+id/ht_name"
+            android:id="@+id/dash_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -39,7 +38,7 @@
 
 
         <EditText
-            android:id="@+id/ht_age"
+            android:id="@+id/dash_age"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/input_bg"
@@ -50,10 +49,10 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/ht_name"
+            app:layout_constraintEnd_toEndOf="@+id/dash_name"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/ht_name"
-            app:layout_constraintTop_toBottomOf="@+id/ht_name"
+            app:layout_constraintStart_toStartOf="@+id/dash_name"
+            app:layout_constraintTop_toBottomOf="@+id/dash_name"
             app:layout_constraintVertical_bias="0.018"
             tools:ignore="HardcodedText" />
 
@@ -80,7 +79,7 @@
             app:layout_constraintVertical_bias="0.583" />
 
         <EditText
-            android:id="@+id/ht_crm"
+            android:id="@+id/dash_crm"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -110,10 +109,10 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/ht_crm"
+            app:layout_constraintEnd_toEndOf="@+id/dash_crm"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/ht_crm"
-            app:layout_constraintTop_toBottomOf="@+id/ht_crm"
+            app:layout_constraintStart_toStartOf="@+id/dash_crm"
+            app:layout_constraintTop_toBottomOf="@+id/dash_crm"
             app:layout_constraintVertical_bias="0.109" />
 
         <Button
@@ -161,7 +160,7 @@
             android:textColor="@color/purple_500"
             android:textSize="35sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/ht_name"
+            app:layout_constraintBottom_toTopOf="@+id/dash_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -173,9 +172,9 @@
             android:layout_width="265dp"
             android:layout_height="96dp"
             app:layout_constraintBottom_toTopOf="@+id/ht_add"
-            app:layout_constraintEnd_toEndOf="@+id/ht_age"
-            app:layout_constraintStart_toStartOf="@+id/ht_age"
-            app:layout_constraintTop_toBottomOf="@+id/ht_age"
+            app:layout_constraintEnd_toEndOf="@+id/dash_age"
+            app:layout_constraintStart_toStartOf="@+id/dash_age"
+            app:layout_constraintTop_toBottomOf="@+id/dash_age"
             app:layout_constraintVertical_bias="0.35000002">
 
             <RadioButton

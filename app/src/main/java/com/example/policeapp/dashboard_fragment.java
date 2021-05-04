@@ -33,7 +33,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
-import static com.example.policeapp.R.id.ht_age;
+import static com.example.policeapp.R.id.dash_age;
 
 public class dashboard_fragment extends Fragment {
 
@@ -57,21 +57,22 @@ public class dashboard_fragment extends Fragment {
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getActivity());
 
-        name = (EditText) getView().findViewById(R.id.ht_name);
-        aadhar = (EditText) getView().findViewById(R.id.ht_aadhar);
+        name = view.findViewById(R.id.dash_name);
 
-        age = (EditText) getView().findViewById(ht_age);
-        crm = (EditText) getView().findViewById(R.id.ht_crm);
-        report = (Button) getView().findViewById(R.id.btn_report);
+        aadhar = view.findViewById(R.id.dash_aadhar);
 
-
-        get_add = (Button) getView().findViewById(R.id.get_loc);
-        btn_logout = (TextView) getView().findViewById(R.id.lgt_out);
+        age = view.findViewById(dash_age);
+        crm = view.findViewById(R.id.dash_crm);
+        report = view.findViewById(R.id.btn_report);
 
 
-        btn_panic = (Button) getView().findViewById(R.id.btn_pnc);
-        btn_help = (Button) getView().findViewById(R.id.btn_5);
-        btn_logout = (TextView) getView().findViewById(R.id.lgt_out);
+        get_add = view.findViewById(R.id.dash_get_loc);
+        btn_logout = view.findViewById(R.id.lgt_out);
+
+
+        btn_panic = view.findViewById(R.id.btn_pnc);
+        btn_help = view.findViewById(R.id.btn_5);
+        btn_logout = view.findViewById(R.id.lgt_out);
 
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,12 +86,7 @@ public class dashboard_fragment extends Fragment {
         });
 
 
-        btn_help.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getContext(), HelpOther.class));
-            }
-        });
+
         get_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,10 +116,10 @@ public class dashboard_fragment extends Fragment {
                 String daadhar=aadhar.getText().toString();
                 String dage=age.getText().toString();
 
-                gender=(RadioGroup)getView().findViewById(R.id.radioGroup2);
+                gender=view.findViewById(R.id.dash_radioGroup2);
 
                 int rdid=gender.getCheckedRadioButtonId();
-                radioButton=getView().findViewById(rdid);
+                radioButton=view.findViewById(rdid);
                 String dgender= String.valueOf(radioButton.getText());
 
 
@@ -135,13 +131,18 @@ public class dashboard_fragment extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(getActivity(), "Report sent successfully!", Toast.LENGTH_LONG).show();
-                            //startActivity(new Intent(getApplicationContext(), complain.class));
+                           // Toast.makeText(getActivity(), "Report sent successfully!", Toast.LENGTH_LONG).show();
+
+                            Intent intent=new Intent(getContext(),success.class);
+                            intent.putExtra("success_msg","Report sent successfully!");
+                            startActivity(intent);
                         }
                         else
                         {
-                            Toast.makeText(getActivity(), "error!!" + task.getException().getMessage(), Toast.LENGTH_LONG).show();
-
+                            //Toast.makeText(getActivity(), "error!!" + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                            Intent intent=new Intent(getContext(),success.class);
+                            intent.putExtra("success_msg","'Error!!' + task.getException().getMessage()");
+                            startActivity(intent);
                         }
                     }
                 });
@@ -179,7 +180,7 @@ public class dashboard_fragment extends Fragment {
                         country=address.get(0).getCountryName();
                         adrline=address.get(0).getAddressLine(0);
                         locality=address.get(0).getLocality();
-                        Toast.makeText(getContext(),"Address: "+country,Toast.LENGTH_LONG).show();
+                        Toast.makeText(getContext(),"Location found!!!",Toast.LENGTH_LONG).show();
 
                     /*    show_loc.setText(Html.fromHtml(
                                 "<font color='#6200EE'><b>Latitude:</b><br></font>"+locality

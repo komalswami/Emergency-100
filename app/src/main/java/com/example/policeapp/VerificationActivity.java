@@ -122,7 +122,7 @@ public class VerificationActivity extends AppCompatActivity {
                            Toast.makeText(VerificationActivity.this,"Phone Number Verified",Toast.LENGTH_LONG).show();
 
                                uploadData();
-                               startActivity(new Intent(getApplicationContext(),complain.class));
+                               //startActivity(new Intent(getApplicationContext(),complain.class));
 
                         } else {
 
@@ -146,7 +146,7 @@ public class VerificationActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(VerificationActivity.this, "Reg successfully!", Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(getApplicationContext(), complain.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity2.class));
                     }
                     else{
                         Toast.makeText(VerificationActivity.this, "error!!" + task.getException().getMessage(), Toast.LENGTH_LONG).show();

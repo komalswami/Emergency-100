@@ -36,20 +36,20 @@ public class help_other_fragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_help_other, container, false);
 
-        t_name=(EditText)getView().findViewById(R.id.ht_name);
-        t_age=(EditText)getView().findViewById(R.id.ht_age);
-        t_address=(EditText)getView().findViewById(R.id.ht_add);
-        t_crm=(EditText)getView().findViewById(R.id.ht_crm);
+        t_name=view.findViewById(R.id.dash_name);
+        t_age=view.findViewById(R.id.dash_age);
+        t_address=view.findViewById(R.id.ht_add);
+        t_crm=view.findViewById(R.id.dash_crm);
 
-        btn_5=(Button)getView().findViewById(R.id.button5);
-        btn_report=(Button)getView().findViewById(R.id.button6);
+        btn_5=view.findViewById(R.id.button5);
+        btn_report=view.findViewById(R.id.button6);
 
         btn_report.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                radioGroup=(RadioGroup)getView().findViewById(R.id.radiogrp);
+                radioGroup=view.findViewById(R.id.radiogrp);
                 int rdid=radioGroup.getCheckedRadioButtonId();
-                radioButton=getView().findViewById(rdid);
+                radioButton=view.findViewById(rdid);
                 dgender= String.valueOf(radioButton.getText());
 
                 name=t_name.getText().toString();

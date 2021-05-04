@@ -39,6 +39,8 @@ public class MainActivity2 extends AppCompatActivity {
                     case R.id.explore:
                         fragment=new report_un();
                         break;
+
+
                     case hp:
                         fragment=new help_other_fragment();
                         break;
