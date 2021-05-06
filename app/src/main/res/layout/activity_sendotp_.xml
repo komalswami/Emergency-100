@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".sendotp_Activity"
-    android:background="@drawable/bbr">
+    android:background="@color/white">
 
    <LinearLayout
        android:layout_width="match_parent"
@@ -26,7 +26,7 @@
            android:layout_height="wrap_content"
            android:layout_marginTop="30dp"
            android:text="OTP Verification"
-           android:textColor="@color/purple_500"
+           android:textColor="@color/darkblue"
            android:textSize="30dp"
            android:textStyle="bold" />
 
@@ -65,9 +65,9 @@
                android:layout_height="40dp"
                android:gravity="center"
                android:text="+91-"
-               android:textColor="@color/colorPrimaryDark"
+               android:textColor="@color/darkblue"
                android:textSize="16sp"
-               android:textStyle="bold"/>
+               android:textStyle="bold" />
 
            <EditText
                android:id="@+id/inputMobile"
@@ -90,10 +90,11 @@
            android:layout_height="wrap_content"
            android:layout_margin="30dp"
            android:background="@drawable/btn1_main"
+           android:backgroundTint="@color/darkblue"
            android:text="Get OTP"
            android:textColor="@color/white"
            android:textSize="16sp"
-           android:textStyle="bold"/>
+           android:textStyle="bold" />
 
 
    </LinearLayout>

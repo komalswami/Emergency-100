@@ -9,8 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bbr"
-        >
+        android:background="@drawable/newbackgrnd">
 
 
         <EditText
@@ -18,10 +17,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
             android:background="@drawable/input_bg"
+            android:drawableLeft="@drawable/ic_baseline_helpother_24"
+            android:drawablePadding="10dp"
             android:ems="10"
             android:hint="Your Name"
             android:inputType="textPersonName"
@@ -60,6 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/btn1_main"
+            android:backgroundTint="@color/darkblue"
             android:gravity="center"
             android:text="get address"
             android:textColor="@color/white"
@@ -70,6 +70,7 @@
             app:layout_constraintStart_toStartOf="@+id/dash_age"
             app:layout_constraintTop_toBottomOf="@+id/dash_radioGroup2"
             app:layout_constraintVertical_bias="0.027" />
+
 
         <Button
             android:id="@+id/btn_pnc"
@@ -85,48 +86,23 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/dash_crm"
             app:layout_constraintTop_toBottomOf="@+id/dash_crm"
-            app:layout_constraintVertical_bias="0.078" />
-
-        <Button
-            android:id="@+id/btn_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_bg"
-            android:text="Help Other"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/dash_crm"
-            app:layout_constraintHorizontal_bias="0.459"
-            app:layout_constraintStart_toStartOf="@+id/dash_crm"
-            app:layout_constraintTop_toBottomOf="@+id/btn_pnc"
-            app:layout_constraintVertical_bias="0.129" />
+            app:layout_constraintVertical_bias="0.118" />
 
         <Button
             android:id="@+id/btn_report"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:background="@drawable/btn_bg"
+            android:backgroundTint="@color/darkblue"
             android:text="Report Case"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_5"
+            app:layout_constraintEnd_toEndOf="@+id/btn_pnc"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/btn_pnc"
             app:layout_constraintTop_toBottomOf="@+id/btn_pnc"
-            app:layout_constraintVertical_bias="0.118" />
-
-        <TextView
-            android:id="@+id/lgt_out"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Logout"
-            android:textColor="@color/design_default_color_error"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.25"
-            app:layout_constraintStart_toEndOf="@+id/btn_5"
-            app:layout_constraintTop_toBottomOf="@+id/btn_pnc"
-            app:layout_constraintVertical_bias="0.196" />
+            app:layout_constraintVertical_bias="0.244" />
 
         <EditText
             android:id="@+id/dash_crm"
@@ -135,7 +111,7 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/input_bg"
             android:ems="10"
-            android:hint="@string/select_crime_type"
+            android:hint="Describe Crime"
             android:inputType="textPersonName"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
@@ -151,7 +127,7 @@
             android:id="@+id/dash_radioGroup2"
             android:layout_width="265dp"
             android:layout_height="96dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintBottom_toTopOf="@+id/ht_add"
             app:layout_constraintEnd_toEndOf="@+id/dash_age"
             app:layout_constraintStart_toStartOf="@+id/dash_age"
@@ -188,6 +164,8 @@
             android:background="@drawable/input_bg"
 
 
+            android:drawableLeft="@drawable/ic_aadhar_black"
+            android:drawablePadding="10dp"
             android:ems="10"
             android:hint="Aadhar No."
             android:inputType="textPersonName"
@@ -204,15 +182,15 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Complain "
-            android:textColor="@color/purple_500"
-            android:textSize="30sp"
+            android:textColor="@color/darkblue"
+            android:textSize="35sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/dash_name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.61" />
+            app:layout_constraintVertical_bias="0.611" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

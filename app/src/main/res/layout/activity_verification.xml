@@ -8,7 +8,7 @@
     android:scrollbars="none"
     android:overScrollMode="never"
     tools:context=".VerificationActivity"
-    android:background="@drawable/bbr">
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="OTP Verification"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/darkblue"
             android:textSize="20dp"
             android:textStyle="bold"/>
 
@@ -68,6 +68,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:cursorVisible="true"
+                android:gravity="center"
                 android:inputType="number"
                 android:itemBackground="#65EAEAEA"
                 app:cursorColor="@color/black"
@@ -83,10 +84,6 @@
                 app:lineColor="@color/colorAccent"
                 app:lineWidth="1dp"
                 tools:ignore="MissingConstraints" />
-
-
-
-
 
 
         </LinearLayout>
@@ -125,10 +122,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
             android:background="@drawable/btn1_main"
+            android:backgroundTint="@color/darkblue"
             android:text="Verify"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
 </ScrollView>

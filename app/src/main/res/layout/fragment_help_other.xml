@@ -11,7 +11,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bbr"
+        android:background="@drawable/newbackgrnd"
         >
 
         <EditText
@@ -85,7 +85,7 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/input_bg"
             android:ems="10"
-            android:hint="@string/select_crime_type"
+            android:hint="Describe crime type"
             android:inputType="textPersonName"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
@@ -136,6 +136,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/btn1_main"
+            android:backgroundTint="@color/darkblue"
             android:text="@string/report"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -157,7 +158,7 @@
             android:layout_marginBottom="8dp"
             android:gravity="center"
             android:text="Help Others"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/darkblue"
             android:textSize="35sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/dash_name"

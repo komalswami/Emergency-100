@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".login"
-    android:background="@drawable/bbr">
+    android:background="@drawable/newbackgrnd">
 
     <EditText
         android:id="@+id/username"
@@ -57,6 +57,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/btn1_main"
+        android:backgroundTint="@color/darkblue"
         android:text="@string/log_in"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -72,15 +73,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="gotomain"
-        android:text="Don't have account!"
-        android:textColor="@color/purple_500"
+        android:text="Don't have an account!"
+        android:textColor="@color/darkblue"
         android:textColorHighlight="#2548B1"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_login"
         app:layout_constraintStart_toStartOf="@+id/btn_login"
         app:layout_constraintTop_toBottomOf="@+id/btn_login"
-        app:layout_constraintVertical_bias="0.095"
+        app:layout_constraintVertical_bias="0.061"
         tools:ignore="HardcodedText" />
 
     <ProgressBar
@@ -102,7 +104,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Log In"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/darkblue"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/username"
@@ -118,10 +120,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Forgot Password ?"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/darkblue"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/pass"
-        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintHorizontal_bias="0.868"
         app:layout_constraintStart_toStartOf="@+id/pass"
         app:layout_constraintTop_toBottomOf="@+id/pass" />
 </androidx.constraintlayout.widget.ConstraintLayout>

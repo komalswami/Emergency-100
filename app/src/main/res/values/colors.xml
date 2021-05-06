@@ -13,4 +13,5 @@
     <color name="colorTextPrimary">#212121</color>
     <color name="colorAccent">#F44336</color>
     <color name="colorPrimary">#536DFE</color>
+    <color name="darkblue">	#003366</color>
 </resources>
