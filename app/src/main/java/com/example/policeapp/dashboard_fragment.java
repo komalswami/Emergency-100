@@ -67,13 +67,13 @@ public class dashboard_fragment extends Fragment {
 
 
         get_add = view.findViewById(R.id.dash_get_loc);
-        btn_logout = view.findViewById(R.id.lgt_out);
+      //  btn_logout = view.findViewById(R.id.lgt_out);
 
 
         btn_panic = view.findViewById(R.id.btn_pnc);
-        btn_help = view.findViewById(R.id.btn_5);
-        btn_logout = view.findViewById(R.id.lgt_out);
-
+        //btn_help = view.findViewById(R.id.btn_5);
+        //btn_logout = view.findViewById(R.id.lgt_out);
+/*
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,7 +85,7 @@ public class dashboard_fragment extends Fragment {
             }
         });
 
-
+*/
 
         get_add.setOnClickListener(new View.OnClickListener() {
             @Override

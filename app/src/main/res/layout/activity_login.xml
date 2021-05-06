@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".login"
-    android:background="@drawable/newbackgrnd">
+    android:background="@drawable/bgbb">
 
     <EditText
         android:id="@+id/username"
