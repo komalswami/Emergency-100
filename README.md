@@ -5,7 +5,15 @@ one can press panic to call for help in case of emergency
 
 * Android (JAVA)
 * Database : Firebase
-<img src="https://github.com/komalswami/PlantMonitoringSystem/blob/master/ss1.png" width="300"/>  <img src="https://github.com/komalswami/PlantMonitoringSystem/blob/master/worksample.jpg" width="400"/> 
+<img src="https://raw.githubusercontent.com/komalswami/Emergency-100/main/ss/ss1.jpeg" width="300"/> 
+<img src="https://raw.githubusercontent.com/komalswami/Emergency-100/main/ss/ss1.jpeg" width="300"/>
+<img src="https://raw.githubusercontent.com/komalswami/Emergency-100/main/ss/ss1.jpeg" width="300"/>
+<img src="https://raw.githubusercontent.com/komalswami/Emergency-100/main/ss/ss1.jpeg" width="300"/>
+<img src="https://raw.githubusercontent.com/komalswami/Emergency-100/main/ss/ss1.jpeg" width="300"/>
+<img src="https://raw.githubusercontent.com/komalswami/Emergency-100/main/ss/ss1.jpeg" width="300"/>
+<img src="https://raw.githubusercontent.com/komalswami/Emergency-100/main/ss/ss1.jpeg" width="300"/>
+<img src="https://raw.githubusercontent.com/komalswami/Emergency-100/main/ss/ss1.jpeg" width="300"/>
+<img src="https://raw.githubusercontent.com/komalswami/Emergency-100/main/ss/ss1.jpeg" width="300"/>
 
 <br/>
 
