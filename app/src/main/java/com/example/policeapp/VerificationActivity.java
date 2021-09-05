@@ -146,7 +146,7 @@ public class VerificationActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(VerificationActivity.this, "Reg successfully!", Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(getApplicationContext(), MainActivity2.class));
+                        startActivity(new Intent(getApplicationContext(), Registration.class));
                     }
                     else{
                         Toast.makeText(VerificationActivity.this, "error!!" + task.getException().getMessage(), Toast.LENGTH_LONG).show();

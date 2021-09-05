@@ -10,7 +10,7 @@ import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 import static com.example.policeapp.R.id.home;
 import static com.example.policeapp.R.id.hp;
 
-public class MainActivity2 extends AppCompatActivity {
+public class Registration extends AppCompatActivity {
     ChipNavigationBar chipNavigationBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

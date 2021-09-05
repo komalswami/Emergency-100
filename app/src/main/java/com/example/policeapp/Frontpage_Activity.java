@@ -19,7 +19,7 @@ public class Frontpage_Activity extends AppCompatActivity {
 
         if( auth.getInstance().getCurrentUser()!= null)
         {
-            startActivity(new Intent(getApplicationContext(),MainActivity2.class));
+            startActivity(new Intent(getApplicationContext(), Registration.class));
             finish();
         }
 
@@ -29,7 +29,7 @@ public class Frontpage_Activity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),my_profile.class));
+                startActivity(new Intent(getApplicationContext(),login.class));
             }
         });
 

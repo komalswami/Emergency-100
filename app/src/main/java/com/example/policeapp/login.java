@@ -45,7 +45,7 @@ public class login extends AppCompatActivity {
 
         if(fAuth.getCurrentUser()!= null)
         {
-            startActivity(new Intent(getApplicationContext(),MainActivity2.class));
+            startActivity(new Intent(getApplicationContext(), Registration.class));
             finish();
         }
 
@@ -69,7 +69,7 @@ public class login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(login.this, "logged in successfully!", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), MainActivity2.class));
+                            startActivity(new Intent(getApplicationContext(), Registration.class));
                         } else {
                             Toast.makeText(login.this, "error!!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             prgbar.setVisibility(View.GONE);

@@ -28,7 +28,7 @@ public class success extends AppCompatActivity {
         _back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),MainActivity2.class));
+                startActivity(new Intent(getApplicationContext(), Registration.class));
             }
         });
     }
