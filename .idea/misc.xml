@@ -4,14 +4,28 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_cam.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/activity_forgot_password_.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_frontpage_.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.12" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_my_profile.xml" value="0.16802536231884058" />
         <entry key="app/src/main/res/layout/activity_sendotp_.xml" value="0.16802536231884058" />
         <entry key="app/src/main/res/layout/activity_success.xml" value="0.16802536231884058" />
+        <entry key="app/src/main/res/layout/activity_tabbed.xml" value="0.16802536231884058" />
         <entry key="app/src/main/res/layout/activity_verification.xml" value="0.16802536231884058" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.16802536231884058" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.16802536231884058" />
+        <entry key="app/src/main/res/layout/fragment_complain.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_dashboard_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.16802536231884058" />
+        <entry key="app/src/main/res/layout/fragment_help_other.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_help_other2.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_registration.xml" value="0.20923913043478262" />
+        <entry key="app/src/main/res/layout/fragment_report_un.xml" value="0.20923913043478262" />
+        <entry key="app/src/main/res/layout/fragment_report_unknown_fragment.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_tabbed_act.xml" value="0.16802536231884058" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.16802536231884058" />
       </map>
     </option>

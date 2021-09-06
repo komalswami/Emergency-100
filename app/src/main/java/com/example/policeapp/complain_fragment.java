@@ -35,7 +35,7 @@ import java.util.Locale;
 
 import static com.example.policeapp.R.id.dash_age;
 
-public class dashboard_fragment extends Fragment {
+public class complain_fragment extends Fragment {
 
     EditText name, aadhar, age, crimetype, crm;
     TextView btn_logout;
@@ -53,7 +53,7 @@ public class dashboard_fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_dashboard_fragment, container, false);
+        View view = inflater.inflate(R.layout.fragment_complain, container, false);
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getActivity());
 

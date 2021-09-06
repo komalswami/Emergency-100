@@ -122,7 +122,6 @@ public class VerificationActivity extends AppCompatActivity {
                            Toast.makeText(VerificationActivity.this,"Phone Number Verified",Toast.LENGTH_LONG).show();
 
                                uploadData();
-                               //startActivity(new Intent(getApplicationContext(),complain.class));
 
                         } else {
 

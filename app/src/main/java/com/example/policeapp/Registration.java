@@ -1,53 +1,94 @@
 package com.example.policeapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
-import com.ismaeldivita.chipnavigation.ChipNavigationBar;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
-import static com.example.policeapp.R.id.home;
-import static com.example.policeapp.R.id.hp;
 
 public class Registration extends AppCompatActivity {
-    ChipNavigationBar chipNavigationBar;
+
+    Button reg;
+    EditText name,aadhar,e_pass;
+    FirebaseAuth auth;
+    ProgressBar prgbar;
+    String adhar;
+    String username,password;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_registration);
 
-        chipNavigationBar=(ChipNavigationBar)findViewById(R.id.chnv);
 
-        chipNavigationBar.setItemSelected(home,true);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,new dashboard_fragment()).commit();
-        bottomMenu();
-    }
 
-    private void bottomMenu() {
-        chipNavigationBar.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
+        reg=(Button)findViewById(R.id.button3);
+        name=(EditText)findViewById(R.id.e_email);
+        aadhar=(EditText)findViewById(R.id.e_aadhar);
+        e_pass=(EditText)findViewById(R.id.e_pass);
+        prgbar=(ProgressBar)findViewById(R.id.prgbar1);
+
+        auth=FirebaseAuth.getInstance();
+
+
+        if(auth.getCurrentUser()!= null)
+        {
+            startActivity(new Intent(getApplicationContext(),sendotp_Activity.class));
+            finish();
+        }
+        reg.setOnClickListener(new View.OnClickListener(){
             @Override
-
-            public void onItemSelected(int i) {
-                Fragment fragment=null;
-                switch (i){
-                    case R.id.home:
-                        fragment=new dashboard_fragment();
-                        break;
-
-                    case R.id.explore:
-                        fragment=new report_un();
-                        break;
+               public void onClick(View v) {
+                username=name.getText().toString().trim();
+                password=e_pass.getText().toString().trim();
+                adhar=aadhar.getText().toString();
 
 
-                    case hp:
-                        fragment=new help_other_fragment();
-                        break;
-                }
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,fragment).commit();
+                prgbar.setVisibility(View.VISIBLE);
+
+
+
+                auth.createUserWithEmailAndPassword(username,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                   if(task.isSuccessful())
+                   {
+                       Toast.makeText(Registration.this,"next!!",Toast.LENGTH_LONG).show();
+                       Intent intent=new Intent(getApplicationContext(),sendotp_Activity.class);
+                       intent.putExtra("adhar",adhar);
+                       intent.putExtra("email",username);
+                       intent.putExtra("pass",password);
+                       startActivity(intent);
+                   }
+                   else
+                   {
+                       Toast.makeText(Registration.this,"Error!!"+task.getException().getMessage(),Toast.LENGTH_LONG).show();
+
+                   }
+                    }
+                });
+
+
             }
         });
+    }
 
+    public void gotologin(View view) {
+        Intent intent=new Intent(this,login.class);
+        startActivity(intent);
     }
 }

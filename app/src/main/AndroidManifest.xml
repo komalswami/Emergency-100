@@ -15,8 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Policeapp">
+        <activity
+            android:name=".Home"
+            android:exported="true"
+            android:label="@string/title_activity_tabbed"
+            android:theme="@style/Theme.Policeapp.NoActionBar" />
         <activity android:name=".success" />
-        <activity android:name=".Registration" />
         <activity android:name=".forgotPassword_Activity" />
         <activity
             android:name=".sendotp_Activity"
@@ -36,7 +40,7 @@
         <activity android:name=".cam" />
         <activity android:name=".login" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Registration"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
     </application>
