@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +14,7 @@ public class sendotp_Activity extends AppCompatActivity {
     Button btn_cmp;
     EditText mobileno;
     String phn_no,aadhar,email,pass;
-
+    TextView _skip;
 
 
     @Override
@@ -25,6 +26,15 @@ public class sendotp_Activity extends AppCompatActivity {
         email=getIntent().getStringExtra("email");
         pass=getIntent().getStringExtra("pass");
 
+        _skip=(TextView)findViewById(R.id.skip);
+
+        _skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Home.class));
+
+            }
+        });
         mobileno=(EditText)findViewById(R.id.inputMobile);
         btn_cmp=(Button)findViewById(R.id.buttonGetOTP);
         btn_cmp.setOnClickListener(new View.OnClickListener() {
